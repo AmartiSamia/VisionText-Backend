@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-      'authentication',
-      'generateImage',
+    'authentication',
+    'generateImage',
     'rest_framework',  # Ajouter DRF pour les API REST
     'corsheaders',  # Ajouter pour gérer les requêtes CORS
 ]

@@ -2,12 +2,6 @@ certifi==2022.9.14
 charset-normalizer==2.1.1
 colorama==0.4.5
 customtkinter==4.6.1
-python -m ensurepip
-python -m pip install setuptools wheel
-python -m pip install --upgrade pip
-pip install torch torchvision torchaudio
-pip install -r requirements.txt
-
 darkdetect==0.7.1
 diffusers==0.3.0
 filelock==3.8.0
