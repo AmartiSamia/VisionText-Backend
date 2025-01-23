@@ -150,6 +150,8 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
+import django_heroku
+django_heroku.settings(locals())
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
