@@ -14,13 +14,13 @@ from pathlib import Path
 from datetime import timedelta
 import os
 from dotenv import load_dotenv
-import environ
+# import environ
 
-env = environ.Env()
-environ.Env.read_env()
+# env = environ.Env()
+# environ.Env.read_env()
 
-SECRET_KEY = env('SECRET_KEY')
-HUGGING_FACE_TOKEN = env('HUGGING_FACE_TOKEN')
+# SECRET_KEY = env('SECRET_KEY')
+# HUGGING_FACE_TOKEN = env('HUGGING_FACE_TOKEN')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
