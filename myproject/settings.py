@@ -14,6 +14,13 @@ from pathlib import Path
 from datetime import timedelta
 import os
 from dotenv import load_dotenv
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
+
+SECRET_KEY = env('SECRET_KEY')
+HUGGING_FACE_TOKEN = env('HUGGING_FACE_TOKEN')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +30,7 @@ HUGGING_FACE_TOKEN = os.getenv('HUGGING_FACE_TOKEN')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-gcm^54u6#1n7dtu70o=uzm%vc3a0k_++6c3!$1l3070$op6*7_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
