@@ -6,9 +6,17 @@ from PIL import Image
 from diffusers import StableDiffusionPipeline
 from django.http import FileResponse
 import os
+from dotenv import load_dotenv
 
-# Auth token for HuggingFace
-from authtoken import auth_token # Remplacez par votre fichier contenant `auth_token`
+# Load environment variables from the .env file
+load_dotenv()
+
+# Get the Hugging Face token from the environment variables
+auth_token = os.getenv("HUGGING_FACE_TOKEN")
+
+# Check if the token is present
+if not auth_token:
+    raise ValueError("Hugging Face token is missing from environment variables")
 
 modelid = "CompVis/stable-diffusion-v1-4"
 device = "cuda" if torch.cuda.is_available() else "cpu"
